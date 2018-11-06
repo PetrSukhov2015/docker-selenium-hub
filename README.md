@@ -4,7 +4,7 @@ Hello world docker and selenium hub for win ch n ff
 ```
 Install docker compose
 Clone this repository
-install python selenium lib
+install python selenium
 run parallel_test_run
 ```
 
@@ -17,3 +17,4 @@ python parallel_test_run.py
 
 
 
+      
