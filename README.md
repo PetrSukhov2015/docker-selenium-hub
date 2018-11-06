@@ -1,5 +1,11 @@
 # docker-selenium-hub
 Hello world docker and selenium hub for win ch n ff
+## environment
+```
+ubuntu16:04
+python2.7
+```
+
 ## setup
 ```
 Install docker compose
