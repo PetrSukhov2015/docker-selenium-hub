@@ -1,26 +1,44 @@
 # docker-selenium-hub
 Hello world docker and selenium hub for win ch n ff
+
 ## environment
 ```
-ubuntu16:04
-python2.7
+ubuntu16
 ```
 
 ## setup
 ```
 Install docker compose
 Clone this repository
-install python selenium
-run parallel_test_run
+Run parallel_test_run
 ```
 
-## usage
+## usage with python image
+```sh
+mkdir docker_tmp
+cd docker_tmp
+git clone https://github.com/PetrSukhov2015/docker-selenium-hub.git
+
+sudo docker-compose up -d
+check localhost:4444 ip add of grid
+sudo docker run sukhov2018/selenium:0.0.11 python parallel_test_run.py 172.17.0.1
+
+```
+where 172.17.0.1 - selenium grid server
+
+
+## usage without python image
 ```sh
 git clone https://github.com/PetrSukhov2015/docker-selenium-hub.git
 docker-compose up -d
 python parallel_test_run.py
 ```
 
+## some notes
+```
+sudo docker build -t sukhov2018/selenium:0.0.14 -t sukhov2018/selenium:latest --no-cache .
+sudo docker push sukhov2018/selenium:0.0.14
+```
 
 
       
