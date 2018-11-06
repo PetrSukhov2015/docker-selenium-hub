@@ -9,7 +9,7 @@ class GoogleSearchTest(unittest.TestCase):
 
     def setUp(self):
         #self.browser = webdriver.Chrome()
-	print (sys.argv[0])
+	print (sys.argv[1])
 	caps = {'browserName': os.getenv('BROWSER', 'chrome')}
     	self.browser = webdriver.Remote(
         	command_executor='http://'+sys.argv[1]+':4444/wd/hub',
