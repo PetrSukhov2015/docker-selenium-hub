@@ -22,6 +22,6 @@ services:
       - HUB_HOST=hub
 
   code:
-    image: sukhov2018/selenium:latest
+    image: sukhov2018/selenium:0.0.11
     
 
