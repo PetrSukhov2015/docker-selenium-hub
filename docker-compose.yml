@@ -1,4 +1,4 @@
-version: '3.5'
+version: '1.0'
 
 services:
 
@@ -20,4 +20,8 @@ services:
       - hub
     environment:
       - HUB_HOST=hub
+
+  code:
+    image: sukhov2018/selenium:latest
+    
 

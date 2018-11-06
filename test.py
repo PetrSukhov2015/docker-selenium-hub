@@ -17,34 +17,14 @@ class GithubSearchTest(unittest.TestCase):
 
 
 
+    def google_search(self):
+	browser = self.browser
+	browser.get("https://google.com/")
+	search_box = driver.find_element_by_name('q')  # Find search input box.
+	search_box.send_keys('selenium')               # Type in selenium.
+	search_box.send_keys(Keys.RETURN)              # Press ENTER.
+	#self.assertIn('selenium', browser.page_source)
 
-
-
-    def test_github_repo_search(self):
-        browser = self.browser
-        browser.get('https://github.com')
-        search_box = browser.find_element_by_name('q')
-        search_box.send_keys(Keys.RETURN)
-        time.sleep(10)  # simulate long running test
-        self.assertIn('Search more than', browser.page_source)
-
-    def test_github_repo_search_for_selenium(self):
-        browser = self.browser
-        browser.get('https://github.com')
-        search_box = browser.find_element_by_name('q')
-        search_box.send_keys('selenium')
-        search_box.send_keys(Keys.RETURN)
-        time.sleep(10)  # simulate long running test
-        self.assertIn('repository results', browser.page_source)
-
-    def test_github_repo_search_for_testdriven(self):
-        browser = self.browser
-        browser.get('https://github.com')
-        search_box = browser.find_element_by_name('q')
-        search_box.send_keys('testdriven')
-        search_box.send_keys(Keys.RETURN)
-        time.sleep(10)  # simulate long running test
-        self.assertIn('testdriven', browser.page_source)
 
 
     def tearDown(self):
